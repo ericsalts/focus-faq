@@ -23,7 +23,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #ffffff;
                 color: #636b6f;
                 font-family: 'Century Gothic', sans-serif;
                 font-weight: 100;

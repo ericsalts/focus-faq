@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<!doctype html>ORIGIN MASTER
+<!doctype html>
 <html lang="en">
  
     <head>

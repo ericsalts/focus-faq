@@ -73,17 +73,17 @@
                 margin-bottom: 30px;
             }
 
-  /* Icon when the collapsible content is shown */
+  /* Icon when the collapsible content is shown 
   .panel-collapse:after {
     font-family: "Glyphicons Halflings";
     content: "\e114";
     float: right;
     margin-left: 15px;
-  }
-  /* Icon when the collapsible content is hidden */
+  } */
+  /* Icon when the collapsible content is hidden 
   .panel-collapse.collapse:after {
     content: "\e113";
-  }
+  } */
 </style>
     </head>
 
@@ -96,16 +96,16 @@
 <DIV style="margin-top:20px; margin-bottom:10px; font-size:100px; color:#E0E4E8;"><span class="glyphicon glyphicon-education"></span> POLK COUNTY</DIV>
 <DIV style="width: 800px; text-align:left;">
 
-  <div class="panel-group"  style="background: #D0E8FF;">
-  <div class="panel panel-default" style="background: #D0E8FF;">
-    <div class="panel-heading" style="background: #D0E8FF;">
+  <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"></span> Collapsible panel</a>
+        <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"></span> Collapsible panel 1</a>
       </h4>
     </div>
-    <div id="collapse1" class="panel-collapse collapse" style="background: #D0E8FF;">
-      <div class="panel-body"style="background: #D0E8FF;">Panel Body</div>
-      <div class="panel-footer" style="background: #E4F0FF;" style="background: #D0E8FF;">Footer</div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">Panel Body</div>
+      <div class="panel-footer">Panel Footer</div>
     </div>
   </div>
 </div> 
@@ -114,7 +114,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"></span> Collapsible panel</a>
+        <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"></span> Collapsible panel 2</a>
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse">

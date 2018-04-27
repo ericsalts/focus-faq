@@ -81,7 +81,7 @@
 <DIV style="margin-top:50px;"></DIV>
 
 <DIV align=center>
-<DIV style="margin-top:20px; margin-bottom:10px; font-size:100px; color:#E0E4E8;"><span class="glyphicon glyphicon-education"></span> <B>POLK COUNTY</B></DIV>
+<DIV style="margin-top:20px; margin-bottom:10px; font-size:100px; color:#E0E4E8;"><span class="glyphicon glyphicon-education"></span> POLK COUNTY</DIV>
 <DIV style="width: 800px; text-align:left;">
 
   <div class="panel-group">

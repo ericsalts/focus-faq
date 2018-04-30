@@ -1,6 +1,6 @@
 <?
 
-$db = mysqli_connect('localhost', 'root','' , 'eric');
+$db = mysqli_connect('localhost', 'root','' , 'focus');
 
 #echo "<P>Host information: " . mysqli_get_host_info($db) . PHP_EOL;
 #echo "<P>";

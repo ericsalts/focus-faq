@@ -165,10 +165,36 @@ $(document).ready(function(){
 });
 </script>
 
-This is more text to test push.
+<BR><P>
+<?
+
+include('dbconnect.php');
+
+$query = "SELECT id, username, firstname, lastname FROM users";
+   
+        $results = mysqli_query($db, $query);   
+        while ($stuff = mysqli_fetch_row($results))
+        {
+        $user_id[$stuff[0]] = $stuff[0];
+        $username[$stuff[0]] = $stuff[1];
+        $lastname[$stuff[0]] = $stuff[2];
+        $firstname[$stuff[0]] = $stuff[3];
+        }
 
 
 
+
+
+  print "<P><B>All Users:</B>\r\n";
+  print "<BR><UL>\r\n";
+
+  foreach ($user_id as $key => $value)
+  {
+    print "<LI><B>$username[$key]</B>: $firstname[$key] $lastname[$key] (ID: $value)</LI>\r\n";
+  }
+  print "</UL>\r\n";        
+
+  ?>
 
 
 

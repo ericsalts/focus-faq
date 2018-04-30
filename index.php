@@ -170,8 +170,8 @@ $(document).ready(function(){
 
 include('dbconnect.php');
 
-$query = "SELECT id, username, firstname, lastname FROM users";
-   
+$query = "SELECT id, username, lastname, firstname FROM users";
+  #print "<textarea>$query</textarea>";
         $results = mysqli_query($db, $query);   
         while ($stuff = mysqli_fetch_row($results))
         {
@@ -179,20 +179,35 @@ $query = "SELECT id, username, firstname, lastname FROM users";
         $username[$stuff[0]] = $stuff[1];
         $lastname[$stuff[0]] = $stuff[2];
         $firstname[$stuff[0]] = $stuff[3];
+        $othervalue[$stuff[0]] = strtolower(substr($stuff[2], 0, 7) . substr($stuff[3], 0, 1));
+        print "<BR>I'm in the while loop<BR>";
         }
 
-
-
-
-
   print "<P><B>All Users:</B>\r\n";
-  print "<BR><UL>\r\n";
+  print "<BR>\r\n";
 
+  $value = 1 . 3;
+  $value = $value . "5";
+  $value = $value * 2;
+
+  $length = strlen($value);
+  
+  print "<P>value = $value (length: $length)<P>";
+ 
+
+
+  print "<TABLE border=0>";
+  print "<TR><TD>Username</TD><TD>First Name</TD><TD>Last Name</TD><TD>Other</TD></TR>\r\n";
   foreach ($user_id as $key => $value)
   {
-    print "<LI><B>$username[$key]</B>: $firstname[$key] $lastname[$key] (ID: $value)</LI>\r\n";
+    print "<TR><TD><input type=text name=username value=\"$username[$key]\"></TD><TD><input type=text name=firstname value=\"$firstname[$key]\"></TD><TD><input type=text name=lastname value=\"$lastname[$key]\"></TD><TD>$othervalue[$key]</TR>\r\n";
   }
-  print "</UL>\r\n";        
+  print "</TABLE>";
+  print "<BR>\r\n";        
+
+
+  print "the username of 3 is $username[3]";
+
 
   ?>
 

@@ -173,13 +173,13 @@ include('dbconnect.php');
 $query = "SELECT id, username, lastname, firstname FROM users";
   #print "<textarea>$query</textarea>";
         $results = mysqli_query($db, $query);   
-        while ($stuff = mysqli_fetch_row($results))
+        while ($stuff =  mysqli_fetch_assoc($results))
         {
-        $user_id[$stuff[0]] = $stuff[0];
-        $username[$stuff[0]] = $stuff[1];
-        $lastname[$stuff[0]] = $stuff[2];
-        $firstname[$stuff[0]] = $stuff[3];
-        $othervalue[$stuff[0]] = strtolower(substr($stuff[2], 0, 7) . substr($stuff[3], 0, 1));
+        $user_id[$stuff['id']] = $stuff['id'];
+        $username[$stuff['id']] = $stuff['username'];
+        $lastname[$stuff['id']] = $stuff['lastname'];
+        $firstname[$stuff['id']] = $stuff['firstname'];
+        $othervalue[$stuff['id']] = strtolower(substr($stuff['lastname'], 0, 7) . substr($stuff['firstname'], 0, 1));
         print "<BR>I'm in the while loop<BR>";
         }
 

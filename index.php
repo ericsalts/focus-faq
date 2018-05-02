@@ -72,7 +72,19 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
+
+  /* Icon when the collapsible content is shown 
+  .panel-collapse:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    float: right;
+    margin-left: 15px;
+  } */
+  /* Icon when the collapsible content is hidden 
+  .panel-collapse.collapse:after {
+    content: "\e113";
+  } */
+</style>
     </head>
 
 <body>
@@ -86,14 +98,14 @@
 
   <div class="panel-group">
   <div class="panel panel-default">
-    <div class="panel-heading" style="background: #D0E8FF;">
+    <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"></span> Collapsible panel</a>
+        <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"></span> Collapsible panel 1</a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse">
       <div class="panel-body">Panel Body</div>
-      <div class="panel-footer" style="background: #E4F0FF;">Panel Footer</div>
+      <div class="panel-footer">Panel Footer</div>
     </div>
   </div>
 </div> 
@@ -102,7 +114,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"></span> Collapsible panel</a>
+        <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"></span> Collapsible panel 2</a>
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse">
@@ -111,14 +123,6 @@
     </div>
   </div>
 </div> 
-
-
-
-
-
-
-
-
 
 
 
@@ -161,7 +165,51 @@ $(document).ready(function(){
 });
 </script>
 
+<BR><P>
+<?
 
+include('dbconnect.php');
+
+$query = "SELECT id, username, lastname, firstname FROM users";
+  #print "<textarea>$query</textarea>";
+        $results = mysqli_query($db, $query);   
+        while ($stuff =  mysqli_fetch_assoc($results))
+        {
+        $user_id[$stuff['id']] = $stuff['id'];
+        $username[$stuff['id']] = $stuff['username'];
+        $lastname[$stuff['id']] = $stuff['lastname'];
+        $firstname[$stuff['id']] = $stuff['firstname'];
+        $othervalue[$stuff['id']] = strtolower(substr($stuff['lastname'], 0, 7) . substr($stuff['firstname'], 0, 1));
+        print "<BR>I'm in the while loop<BR>";
+        }
+
+  print "<P><B>All Users:</B>\r\n";
+  print "<BR>\r\n";
+
+  $value = 1 . 3;
+  $value = $value . "5";
+  $value = $value * 2;
+
+  $length = strlen($value);
+  
+  print "<P>value = $value (length: $length)<P>";
+ 
+
+
+  print "<TABLE border=0>";
+  print "<TR><TD>Username</TD><TD>First Name</TD><TD>Last Name</TD><TD>Other</TD></TR>\r\n";
+  foreach ($user_id as $key => $value)
+  {
+    print "<TR><TD><input type=text name=username value=\"$username[$key]\"></TD><TD><input type=text name=firstname value=\"$firstname[$key]\"></TD><TD><input type=text name=lastname value=\"$lastname[$key]\"></TD><TD>$othervalue[$key]</TR>\r\n";
+  }
+  print "</TABLE>";
+  print "<BR>\r\n";        
+
+
+  print "the username of 3 is $username[3]";
+
+
+  ?>
 
 
 

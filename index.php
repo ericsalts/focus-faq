@@ -210,10 +210,64 @@ $query = "SELECT id, username, lastname, firstname FROM users";
 
 
   ?>
+<h3>User Preferences and Configuration</h3>
+<ol>
+  <li>User Preferences	</li>
+  <li>Gradebook Configuration </li>	
+  <li>Creating Categories--No Weighting	</li>
+  <li>Creating Categories--With Weighting	
+  <li>Delete a Category	</li>
+</ol>
+
+<h3>Attendance Procedures </h3>
+<ol>
+<li value=6> Combine Sections for Attendance</li>
+<li> Take Attendance in List View</li>
+<li> Take Attendance With a Seating Chart</li>
+<li> Create a Seating Chart</li>
+<li> Verify Attendance Was Sent</li>
+<li> Update Attendance</li>
+</ol>
+
+<h3>User Preferences and Configuration</h3>
+<ol>
+  <li>User Preferences	</li>
+  <li>Gradebook Configuration </li>	
+  <li>Creating Categories--No Weighting	</li>
+  <li>Creating Categories--With Weighting	
+  <li>Delete a Category	</li>
+</ol>
+
+<h3>User Preferences and Configuration</h3>
+<ol>
+  <li>User Preferences	</li>
+  <li>Gradebook Configuration </li>	
+  <li>Creating Categories--No Weighting	</li>
+  <li>Creating Categories--With Weighting	
+  <li>Delete a Category	</li>
+</ol>
+
+
+
+14. Elementary School Reports (heading)
+15. Print Mid-Term Elementary Progress Reports	
+16. Post Elementary Standards-Based Grades	
+17. Post Elementary Final Grades	
+
+18. Secondary Gradebook Procedures (heading)
+19. Create an Assignment	
+20. Delete an Assignment	
+21. Edit an Assignment	
+22. Copy an Assignment	
+23. Enter Assignment Grades	
+24. Sort and Filter Assignments	
+25. Combining Classes for Secondary Gradebooks	
+
 
 
 
 </DIV>
+
 </DIV>
 
 </body>
